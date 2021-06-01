@@ -1,0 +1,67 @@
+<form class="row" (ngSubmit)="onSubmit( f )" #f="ngForm">
+    <div class="w-100 p-0">
+        <label class="text-start d-none d-lg-block">Marca de auto</label>
+        <select class="w-100"
+        name="marca"
+        [(ngModel)]="carro.marca">
+            <option selected>BMW</option>
+            <option value="1">Mazda</option>
+            <option value="2">Toyota</option>
+            <option value="3">Ferrari</option>
+        </select>
+    </div>
+  
+        <label class="text-start col-8 p-0">Modelo de auto</label>
+        <label class="text-start col-4 p-0">Año</label>
+        <select class="col-8"
+        name="modelo"
+        [(ngModel)]="carro.modelo">
+            <option selected>Sedan</option>
+            <option value="1">Camineta 4X4</option>
+            <option value="2">Camineta 4x2</option>
+            <option value="3">Sport</option>
+        </select>
+        <select class="col-4"
+        name="anio"
+        [(ngModel)]="carro.anio">
+            <option selected>2021</option>
+            <option value="1">2020</option>
+            <option value="2">2019</option>
+            <option value="3">2018</option>
+        </select>
+
+
+    <div class="col-12 p-0">
+
+        <label class="text-start d-none d-lg-block">Email</label>
+        <input
+        class="form-control"
+        type="email"
+        name="email"
+        email
+        required
+        placeholder="email"
+        [(ngModel)]="carro.email">
+        <span
+        *ngIf="f.submitted && f.controls['email'].errors"
+         class="text-danger text-start d-block">El Correo es Obligatorio</span>
+    </div>
+    <div class="col-12 p-0">
+        <label for="" class="text-start d-none d-lg-block">Téfono celular</label>
+        <input
+        type="tel"
+        class="form-control"
+        placeholder="Teléfono celuar"
+        name="tel"
+        required
+        minlength="7"
+        [(ngModel)]="carro.tel"
+        >
+        <span
+        *ngIf="f.submitted && f.controls['tel'].errors"
+         class="text-danger text-start d-block">El teléfono es Obligatorio</span>
+    </div>
+    <div class="col-12 p-0 mb-3">
+        <button type="submit" class="btn mt-2 btn-cotizar">Cotizar Ahora</button>
+    </div>
+</form>

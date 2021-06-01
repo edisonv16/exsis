@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    &::before{
+        content: "";
+        height: 70px;
+        width: 100%;
+        background-color: #69a8da;
+        position: absolute;
+        z-index: -1;
+        top:200px;
+        display: block;
+    }
+}
+@media(min-width:1px)and(max-width:1023px){
+    body{
+        &::before{
+            display: none;
+        }
+    }
+}

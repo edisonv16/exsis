@@ -1,0 +1,32 @@
+.row{
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    label{
+        font-size: 14px;
+        color:#979797;
+        font-weight: 100px;
+    }
+}
+select{
+    padding: 10px 0;
+    border-radius: 5px;
+    border:1px solid rgba(0,0,0,0.2);
+    &::placeholder{
+        font-size: none;
+    }
+}
+.btn-cotizar{
+    background-color:#c0d35b;
+    color: white;
+    box-shadow: 0 3px 3px #99a53a;
+}
+@media(min-width:1px)and(max-width:1023px){
+    .row{
+        label{
+            display: none;
+        }
+    }
+ }
